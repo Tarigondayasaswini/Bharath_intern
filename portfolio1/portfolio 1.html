@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="X-icon" href="C:\Users\91701\OneDrive\Desktop\js\icon.png">
+    <title>Portfolio Website</title>
+<style>
+
+* {
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-transform: capitalize;
+border: 2rem  rgb(35, 111, 224) ;
+transition: all .2s linear;
+box-sizing: border-box;
+text-decoration:none;
+outline: none;
+border: none;
+}
+html{
+font-size: 65%;
+}
+html ::-webkit-scrollbar{
+width: 1rem;
+height: .5rem;
+}
+html ::-webkit-scrollbar-track{
+background-color:white;
+}
+html ::-webkit-scrollbar-thumb{
+background-color:rgb(133, 145, 155);
+height: .5px;
+}
+body{
+background-color:chocolate ;
+padding-left: 40rem;
+color: rgb(245, 245, 245);
+border: .2rem solid rgba(247, 106, 148, 0.937);
+border-style:hidden;
+}
+.user span{
+   color:indigo;
+}
+.heading{
+font-size: 3rem;
+border-bottom: .2rem solid rgb(94, 92, 92);
+text-align: center;
+margin-bottom: .5rem;
+padding-right: 1rem;
+}
+.heading span{
+padding-left: 1rem;
+color:lavender;
+}
+header{
+position: fixed;
+top: 0;left:0;
+background-color:lavender;
+height: 100%;
+width: 30%;
+text-align: center;
+border-right: .2rem double pink;
+}
+header .user h1{
+color: indigo;
+font-size: 3rem;
+margin-bottom: .002rem;
+}
+header .user p{
+color: rgb(220,20,60);
+font-size: 3rem;
+margin-bottom: .02rem;
+}
+header .navbar{
+width: 85%;
+margin-top: -1.5rem;
+text-align: center;
+padding-left: 5rem;
+}
+header .navbar ul{
+list-style: circle;
+padding: 1rem 1rem;
+}
+header .navbar ul li a{
+display: block;
+padding: 1rem ;
+margin: 1rem 0;
+color: black;
+background-color: rgb(94, 92, 92);
+border-radius: 5rem;
+font-size: 3rem;
+text-align: center;
+}
+header .navbar ul li a:hover{
+background-color:pink;
+}
+.home{
+display: flex;
+flex-flow: column;
+padding: 5rem;
+justify-content: center;
+margin-top: 5rem;
+}
+.home h1{
+color:aqua;
+}
+.home h1 span:after{
+content:'DEVELOPER';
+animation: animate 4s infinite;
+}
+@keyframes animate{
+0%{content:'DEVELOPER';}
+25%{content: 'WEB DEVELOPER'}    
+}
+.home img {
+display:block;
+margin-left: auto;
+margin-right:auto;
+}
+
+.home h1{
+margin-top: .5rem;
+font-size: 3rem;
+}
+.home h1 span{
+color:aqua ;
+}
+.home p{
+
+    margin-top: .05rem;
+    font-size: 1.5rem;
+}
+.b{
+    margin-top: 1rem;
+    display: block;
+    padding: 2rem 2.5rem;
+    color: whitesmoke;
+    background-color: rgb(94, 92, 92);
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.b:hover{
+    background-color:rgb(43, 173, 173);
+}
+.c{
+    margin-top:1rem;
+    display:block;
+    background-color: grey;
+    padding:2rem 5rem;
+    color:whitesmoke;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    order:initial;
+}
+.c:hover{
+    background-color: azure;
+}
+.about .row .info{
+    margin-top: 1rem;
+    font-size: 1.75rem;
+}
+.about.ro span{
+    color:grey;
+}
+.about .row .info span{
+    color:gray;
+}
+.about .row .counter{
+    display: flex;
+    flex:1 1 48rem;
+    text-align: center;
+    justify-content: right;
+}
+.about .row .counter .box{
+    width: 25rem;
+    height: 15rem;
+    background-color: rgb(78, 77, 77);
+    text-align: right;
+    font-size: 1.8rem;
+    margin: 2rem;
+    padding: 2rem;
+    padding-bottom: .5rem;
+    border-radius: 1rem;
+    margin-bottom: 7rem;
+}
+.about .row .counter .box span{
+    font-size: 5rem;
+    color:aqua ;
+}
+.about .row .counter .box i{
+    color: yellow;
+    padding-top: -.5rem;
+    font-size: 4rem;
+}
+.skills .row{
+    padding-top: 1rem;
+}
+.skills .row .content{
+    font-size: 2rem;
+}
+.skills .row .box{
+    display: flex;
+    flex-direction: row;
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+}
+.skills .row .box h3{
+    padding-left: 2.5rem;
+}
+.experience .column{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: .5rem;
+    padding-top: 3rem;
+}
+.experience .info h3{
+    color: rgba(247, 247, 247, 0.923);
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+.experience .info h3 span{
+    color: rgb(236, 238, 236) ;
+}
+.contact .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact .row .content{
+    flex:  1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+.contact .row .content .title{
+    margin-top: -15rem;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+.contact .row .content .info h3{
+    font-size: 1.5rem;
+}
+contact .row .content .info h3 i{
+    padding-right: 1.5rem;
+    color:  rgba(240, 231, 228, 0.952) ;
+}
+.contact .row form{
+    padding: 2rem;
+    flex: 1 1 45rem;
+    margin: 2rem;
+    margin-bottom: 3rem;
+    color: black;
+}
+.contact .row form .box{
+    padding: 1rem 2.5rem;
+    margin: 1rem 0;
+    width: 80%;
+    border-radius: 1.2rem;
+    background-color:  rgb(78, 77, 77);
+    color: black;
+    font-size: 1.5rem;
+}
+.contact .row form .boxmessage i{
+    color: black;
+}
+.contact .row form .b{
+    margin-top: 2.5rem;
+}
+.contact .row form .box::placeholder{
+    color:black;
+}
+.contact .credit{
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+}
+.contact .credit h3{
+    font-size: 3rem;
+    text-align: center;
+}
+.contact .credit i{
+    text-align: center;
+    padding: 2rem;
+    border-radius: 4rem;
+    font-size: 1.75rem;
+    background-color:rgb(30, 159, 159);
+}
+</style>
+    
+</head>
+<body>
+<header>
+    <div class="user">
+        <h1><span>Tarigonda</span>Yasaswini </h1>
+        <p><h1><i>Frontend Developer</i></h1></p>
+     </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href=#about>About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="home" id="home">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE4LF8B3VIA4thP3UOtaFlKBZ4xOq2aq3gfA&usqp=CAU" align ="center" width ="200" height="200">       
+<h1><center>Hello,it's Me Tarigonda Yasaswini</center></h1>  
+    <h1><center>Front-End <span></span></center></h1>
+    <p>I'm a web developer with Extensive experience.<br>I can create
+     clean and more interactive websites and iam more passionate to my work and easily adaptable to any enivornment .</p> 
+    <a href="#Hire Me"><button class="b">Hire Me</button></a>
+</section>
+<section class="about" id="about">
+    <h1 class="heading">About<span>Me</span></h1>
+    <p><h1>I'm a front end developer.
+        I'm passionate about creating great user experiences and have a strong 
+        understanding of usability and accessibility standards.
+    I'm bringing the Creativity of the music industry and the precision of journalism 
+to a web page near you. Coding has become a prefect union of my two favourite passions
+and  I love seeing the results of my efforts helping the user's experience.I'm finding 
+unique solutions to complex problems and i'm doing it all while making the worst puns 
+you've never heard before. </h1></p>
+<p><h1>I can create
+    clean and more interactive websites. I create Websites to
+     do businesses and do better online.
+</h1>
+</p>
+<section class="skills" id="skills">
+    <h1 class="heading"><span>My </span>Skills</h1>
+    <div class="row">
+        <div class="content">
+            <div class="box">
+               <h3>HTML</h3>
+            </div>
+  <div class="box">
+               <h3>CSS</h3>
+            </div>
+            <div class="box">
+                <h3>JS</h3>
+            </div>
+            <div class="box">
+               <h3>C language</h3>
+            </div>
+            <div class="box">
+                <h3>Ms excel</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="experience" id="experience">
+    <h1 class="heading"><span>My </span>Experience</h1>
+    <div class="column">
+        <div class="info">
+            <h3><span>1</span> month Experience as</h3>
+            <h3><span>Front-End Web Developer Intern</span> at Bharat Intern</h3>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <h1 class="heading">CONTACT ME</h1>
+    <div class="row">
+        <div class="content">
+            <h3 class="heading">CONTACT INFO</h3>
+            <div class="info">
+                <h3><i class="fa fa-envelope"></i>yashuu@gmail.com</h3>
+                <h3><i class="fa fa-phone"></i> +91-70755342546</h3>
+                <h3><i class="fa fa-map-pin"></i> sudum, India - 76546001.</h3> 
+            </div>
+        </div>
+        <form action="">
+            <input type="text" placeholder="name" class="box">
+            <input type="email" placeholder="email" class="box">
+            <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+            <button type="submit" class="b">Send<i class="fa fa-paper-plane"></i></button>
+        </form>
+        <div class="credit">
+            <h3>yasaswini</h3>
+            <i class="fa fa-whatsapp"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-telegram"></i>
+            <i class="fa fa-github"></i>
+        </div>
+    </div>
+</section>
+<script>
+$(document).ready(function(){
+    $('#menu').click(function(){
+        $(this).toggleClass('fa-times');
+        $('header').toggleClass('toggle');
+    });
+    $(window).on('scroll load',function(){
+        $('#menu').removeClass('fa-times');
+        $('header').removeClass('toggle');
+    });
+    $('a[href*="#"]').on('click',function(e){
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop : $($(this).attr('href')).offset().top,
+        },
+            500,
+            'linear'
+        );
+    });
+});s
+</script>
+</body>
+</html>
